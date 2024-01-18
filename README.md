@@ -4,6 +4,10 @@ The project was made with the purpose of learning and researching Embedded Syste
 
 ![image](https://github.com/NgocDo-2002/Humidity-and-Temperature-Monitor/assets/84715183/2fa01247-abcd-4627-bc99-6fcb32d8843a)
 
-## Introduction
+## Operating specifications
 
-Briefly 
+The communication between sensor and microcontroller is separated into 3 steps: When MCU send start signal, AM2302 change from standby-status to running-status. When MCU finishs sending the start signal, AM2302 will send response signal of 40-bit data that reflect the relative humidity and temperature to MCU.
+
+Step 1: MCU send out start signal to AM2302 and AM2302 send response signal to MCU
+• MCU pull down in at least 1ms for start signal
+• MCU pull up wait 20-40us for the sensor's response
